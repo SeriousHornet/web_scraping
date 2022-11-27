@@ -7,13 +7,27 @@ headers = {'User-Agent':
                'Safari/537.36'}
 
 # page = input('Enter url: ')
-page = 'https://www.nike.com/w/mens-shoes-nik1zy7ok'
-
-pageTree = requests.get(page)
+# page = 'https://www.nike.com/w/mens-shoes-nik1zy7ok'
+page = 'https://www.fotmob.com/match/3854574/matchfacts/argentina-vs-mexico'
+pageTree = requests.get(page, headers=headers)
 if pageTree.status_code != 200:
     print("request denied")
 else:
     print("ok")
-    pageSoup = BeautifulSoup(pageTree.text, 'lxml')
+    pageSoup = BeautifulSoup(pageTree.content, 'lxml')
+    print(type(pageSoup))
+    # print(pageSoup.prettify())
+    shot_div = pageSoup.find_all('circle', id='circle')#[class="results__body"]')
+    # shot_div = pageSoup.find_all(attrs={'class': 'css-kgyj9i-PitchSVGWrapper'})
+    print(type(shot_div))
+    print(shot_div)
+    # body = pageSoup.select('div[class="product-card__body"]')
+    # print(pageSoup.find_all('div', attrs={'class': 'banner-node'}))#[class="banner-node css-gb9zhi"]')
 
-    prod_body = pageSoup.select('div[class="product-card__body"]')
+# html = '<tr id="history_row_938220" style="" class="admin-bookings-table-row bookings-history-row  paid   ">'
+#css-62w8ud-FullscreenShotmapContainer-applyLightHover-ShotmapAnimations-commonShotMapContainer e1786a3a20
+#
+# soup = BeautifulSoup(html, 'html.parser')
+#
+# res = soup.find_all(attrs={'class': 'paid'})
+# print(res)
