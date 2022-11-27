@@ -26,8 +26,6 @@ else:
 
 # html = '<tr id="history_row_938220" style="" class="admin-bookings-table-row bookings-history-row  paid   ">'
 #css-62w8ud-FullscreenShotmapContainer-applyLightHover-ShotmapAnimations-commonShotMapContainer e1786a3a20
-#
 # soup = BeautifulSoup(html, 'html.parser')
-#
 # res = soup.find_all(attrs={'class': 'paid'})
 # print(res)
