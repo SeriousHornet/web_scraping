@@ -24,6 +24,7 @@ else:
     # body = pageSoup.select('div[class="product-card__body"]')
     # print(pageSoup.find_all('div', attrs={'class': 'banner-node'}))#[class="banner-node css-gb9zhi"]')
 
+
 # html = '<tr id="history_row_938220" style="" class="admin-bookings-table-row bookings-history-row  paid   ">'
 #css-62w8ud-FullscreenShotmapContainer-applyLightHover-ShotmapAnimations-commonShotMapContainer e1786a3a20
 # soup = BeautifulSoup(html, 'html.parser')
