@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Web Scraping.iml" filepath="$PROJECT_DIR$/.idea/Web Scraping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../fut_plot/.idea/fut_plot.iml" filepath="$PROJECT_DIR$/../fut_plot/.idea/fut_plot.iml" />
     </modules>
   </component>
 </project>
