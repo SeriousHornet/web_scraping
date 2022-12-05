@@ -8,19 +8,23 @@ headers = {'User-Agent':
 
 # page = input('Enter url: ')
 # page = 'https://www.nike.com/w/mens-shoes-nik1zy7ok'
-page = 'https://www.fotmob.com/match/3854574/matchfacts/argentina-vs-mexico'
+page = 'https://www.fotmob.com/match/3370551/matchfacts/argentina-vs-australia'
 pageTree = requests.get(page, headers=headers)
 if pageTree.status_code != 200:
     print("request denied")
 else:
     print("ok")
-    pageSoup = BeautifulSoup(pageTree.content, 'lxml')
+    pageSoup = BeautifulSoup(pageTree.text, 'html.parser')
     print(type(pageSoup))
     # print(pageSoup.prettify())
     shot_div = pageSoup.find_all('circle', id='circle')#[class="results__body"]')
     # shot_div = pageSoup.find_all(attrs={'class': 'css-kgyj9i-PitchSVGWrapper'})
     print(type(shot_div))
     print(shot_div)
+    # for shot in shot_div:
+    #     print(shot.get('cx'))
+    #     print(shot.get('cy'))
+
     # body = pageSoup.select('div[class="product-card__body"]')
     # print(pageSoup.find_all('div', attrs={'class': 'banner-node'}))#[class="banner-node css-gb9zhi"]')
 
