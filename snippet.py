@@ -44,7 +44,8 @@ raw_data = json.loads(json_data)
 
 general = raw_data["props"]["pageProps"]["general"]
 content = raw_data["props"]["pageProps"]["content"]
-
+print(general.keys())
+print(general['leagueRoundName'])
 # looker = df_content['stats']['stats'][1]
 # print(len(looker))
 # print(type(looker))
@@ -55,6 +56,7 @@ content = raw_data["props"]["pageProps"]["content"]
 shots = content["shotmap"]["shots"]
 
 df_shots = pd.DataFrame(shots)
+
 float_conv = {'x': float, 'y': float, 'min': int, 'blockedX': float, 'blockedY': float, 'expectedGoals': float,
               'expectedGoalsOnTarget': float, 'goalCrossedY': float, 'goalCrossedZ': float}
 df_shots = df_shots.astype(float_conv)
