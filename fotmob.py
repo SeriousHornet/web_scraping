@@ -45,6 +45,7 @@ raw_data = json.loads(json_data)
 general = raw_data["props"]["pageProps"]["general"]
 content = raw_data["props"]["pageProps"]["content"]
 
+
 # looker = df_content['stats']['stats'][1]
 # print(len(looker))
 # print(type(looker))
