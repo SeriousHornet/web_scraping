@@ -1,0 +1,14 @@
+Using 'lxml' parser:
+    soup.find returns a 'bs4.element.Tag' type object
+    soup.select returns a 'bs4.element.ResultSet' type object
+    soup.find_all returns a 'bs4.element.ResultSet' type object
+
+
+Using 'html.parser' parser:
+    soup.find returns a 'bs4.element.Tag' type object
+    soup.select returns a 'bs4.element.ResultSet' type object
+    soup.find_all returns a 'bs4.element.ResultSet' type object
+
+
+soup.find_all(attrs={'class': ['admin-bookings-table-row', 'bookings-history-row', 'paid']})
+soup.find_all(attrs={'class': 'admin-bookings-table-row'})
