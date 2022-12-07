@@ -8,9 +8,9 @@ import seaborn as sns
 
 pd.set_option('display.max_columns', 50)
 base_url = 'https://understat.com/match/'
-match = str(input('Please enter the match id: '))
-url = base_url + match
-# url = 'https://understat.com/match/19773'
+# match = str(input('Please enter the match id: '))
+# url = base_url + match
+url = 'https://understat.com/match/19773'
 
 res = requests.get(url)
 soup = BeautifulSoup(res.content, 'lxml')
@@ -67,18 +67,17 @@ def plotting(df):
     return
 
 
-# h_team = home.loc['h_team'][0]
-# a_team = away.loc['a_team'][0]
+h_team = home['h_team'][0]
+a_team = away['a_team'][0]
 
 team = input("Select home or away team: ")
 if team == 'home':
     plotting(home)
-    # plt.title(f'{h_team} Shots \n taken +vs. +{a_team} ')
+    plt.title(f'{h_team} shots \n vs. {a_team}', color='white', size=20)
 
 if team == 'away':
     plotting(away)
-    # plt.title(f'{a_team} Shots \n taken +vs. +{h_team} ')
+    plt.title(f'{a_team} shots \n vs. {h_team}', color='white', size=20)
 
-print(home.columns)
 
 plt.show()
